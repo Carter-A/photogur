@@ -42,6 +42,10 @@ class PicturesController < ApplicationController
     redirect_to pictures_url
   end
 
+  def api
+    @response = Picture.api
+  end
+
   private
   def picture_params
     params.require(:picture).permit(:artist, :title, :url)

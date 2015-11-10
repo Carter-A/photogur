@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root 'pictures#index'
+  root 'pictures#api'
 
   resources :pictures
   # The priority is based upon order of creation: first created -> highest priority.
