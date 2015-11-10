@@ -43,7 +43,12 @@ class PicturesController < ApplicationController
   end
 
   def api
-    @response = Picture.api
+    response = Picture.api
+
+    @link = []
+    response['data'].each do |item|
+      @link << item['link']
+    end
   end
 
   private
