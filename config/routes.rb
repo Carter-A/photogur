@@ -2,7 +2,8 @@ Rails.application.routes.draw do
   root 'pictures#index'
 
   resources :pictures
-
+  delete '/logout', to: 'sessions#destroy'
+  get '/auth/twitter/callback', to: 'sessions#create'
   get '/api/pictures', to: 'pictures#api', as: 'api'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

@@ -1,3 +1,10 @@
-<%= @link.each do |link| %>
+<%= @twitter[0]['source'] %>
+<% @twitter.each do |tweet| %>
+  <ul>
+    <li><%= tweet.text %> <%= tweet.user.screen_name %></li>
+  </ul>
+<% end %>
+
+<% @link.each do |link| %>
   <img src="<%= link %>" alt="">
 <% end %>

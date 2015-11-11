@@ -5,4 +5,9 @@ class Picture < ActiveRecord::Base
       :headers => {"Authorization" => "Client-ID 8981794f11d793d"})
   end
 
+  def self.twitter_api
+    HTTParty.get('https://api.twitter.com/1.1/statuses/home_timeline.json')
+  end
+
+
 end

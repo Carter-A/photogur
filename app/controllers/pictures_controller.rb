@@ -43,8 +43,8 @@ class PicturesController < ApplicationController
   end
 
   def api
+    @twitter = $client.home_timeline[0..5]
     response = Picture.api
-
     @link = []
     response['data'].each do |item|
       @link << item['link']
