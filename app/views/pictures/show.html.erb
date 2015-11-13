@@ -1,3 +1,14 @@
-<%= link_to "Back to Pictures", pictures_url %> | <%= link_to "Edit", edit_picture_path(@picture) %> | <%= link_to "Delete", picture_path(@picture), method: :delete, data: {confirm: "Are you sure you want to delete this picture?"}  %>
-<p><%= @picture.title %>, <%= @picture.artist %></p>
-<%= image_tag @picture.url %>
+
+<div class="mdl-layout__content">
+  <div class="mdl-grid">
+    <div class="mdl-cell mdl-cell--12-col">
+      <%= link_to "Back to Pictures", pictures_url, class: "mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" %>
+      <%= link_to "Edit", edit_picture_path(@picture), class: "mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" %>
+      <%= link_to "Delete", picture_path(@picture), method: :delete, data: {confirm: "Are you sure you want to delete this picture?"}, class: "mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" %>
+    </div>
+    <div class="mdl-cell mdl-cell--12-col">
+      <h4><%= @picture.title %>, <%= @picture.artist %></h4>
+      <%= image_tag @picture.url %>
+    </div>
+  </div>
+</div>

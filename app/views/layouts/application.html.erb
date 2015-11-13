@@ -2,12 +2,36 @@
 <html>
 <head>
   <title>Photogur</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
+  <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.6/material.indigo-pink.min.css" />
+  <script src="https://storage.googleapis.com/code.getmdl.io/1.0.6/material.min.js"></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
+  <%= stylesheet_link_tag "custom" %>
 </head>
 <body>
-
+  <div class="mdl-layout mdl-js-layout">
+    <header class="mdl-layout__header">
+      <div class="mdl-layout-icon"></div>
+      <div class="mdl-layout__header-row">
+        <a href="/pictures"><span class="mdl-layout__title">Photogur</span></a>
+        <div class="mdl-layout-spacer"></div>
+        <nav class="mdl-navigation">
+          <%= link_to "New Picture", "/pictures/new", class: "mdl-navigation__link" %>
+          <%= link_to "API", "/api/pictures", class: "mdl-navigation__link" %>
+          <%= link_to "Twitter OAuth", '/auth/twitter', class: "mdl-navigation__link" %>
+          <%= link_to "Logout of Twitter", logout_path, method: :delete, class: "mdl-navigation__link" %>
+        </nav>
+      </div>
+    </header>
+    <div class="mdl-layout__drawer">
+      <span class="mdl-layout__title">Photogur</span>
+      <nav class="mdl-navigation">
+        <%= link_to "New Picture", "/pictures/new", class: "mdl-navigation__link" %>
+        <%= link_to "API", "/api/pictures", class: "mdl-navigation__link" %>
+        <%= link_to "Twitter OAuth", '/auth/twitter', class: "mdl-navigation__link" %>
+        <%= link_to "Logout of Twitter", logout_path, method: :delete, class: "mdl-navigation__link" %>
+      </nav>
+    </div>
 <%= yield %>
 
 </body>

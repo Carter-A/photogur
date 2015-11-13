@@ -1,0 +1,20 @@
+.mdl-layout__header {
+  display: block !important;
+}
+
+img {
+  width: 100%;
+}
+
+h5, h6 {
+  margin: auto !important;
+  text-align: center;
+}
+.mdl-textfield {
+  display: block !important;
+}
+
+body > div > div > header > div.mdl-layout__header-row > a {
+  color: white;
+  text-decoration: none;
+}

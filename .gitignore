@@ -15,3 +15,7 @@
 /log/*
 !/log/.keep
 /tmp
+
+#protect api secret keys
+/config/initializers/twitter_cred.rb
+/config/initializers/omniauth.rb
