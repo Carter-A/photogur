@@ -6,10 +6,9 @@
   <script src="https://storage.googleapis.com/code.getmdl.io/1.0.6/material.min.js"></script>
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
-  <%= stylesheet_link_tag "custom" %>
+  <%= stylesheet_link_tag "application" %>
 </head>
 <body>
-  <div class="mdl-layout mdl-js-layout">
     <header class="mdl-layout__header">
       <div class="mdl-layout-icon"></div>
       <div class="mdl-layout__header-row">
@@ -32,7 +31,20 @@
         <%= link_to "Logout of Twitter", logout_path, method: :delete, class: "mdl-navigation__link" %>
       </nav>
     </div>
+
+
+
 <%= yield %>
+
+<footer class="mdl-mini-footer">
+  <div class="mdl-mini-footer__left-section">
+    <div class="mdl-logo">Title</div>
+    <ul class="mdl-mini-footer__link-list">
+      <li><a href="#">Help</a></li>
+      <li><a href="#">Privacy & Terms</a></li>
+    </ul>
+  </div>
+</footer>
 
 </body>
 </html>

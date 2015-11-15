@@ -14,7 +14,11 @@ h5, h6 {
   display: block !important;
 }
 
-body > div > div > header > div.mdl-layout__header-row > a {
+body > header > div.mdl-layout__header-row > a {
   color: white;
   text-decoration: none;
+}
+
+body > main {
+  margin-top: 25px;
 }
